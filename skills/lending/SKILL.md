@@ -1,23 +1,20 @@
 ---
 name: lending
 description: >-
-  QuickBooks Capital small-business financing — the QuickBooks Term Loan,
-  QuickBooks Line of Credit, and Intuit Business Credit Card (first-party, issued
-  by WebBank) and the QuickBooks Business Loan Marketplace (partner lenders). Use
-  for how these products work, eligibility, rates, fees, and terms, and to
-  compare or choose between them (qbo_lending_help, qbo_lending_shop_loans), and
-  to estimate loan payments — weekly/monthly payment, total interest, total
-  repayment (qbo_lending_estimate_loan_payments). Also answer questions about the
-  signed-in user's own QuickBooks Capital loans and lines of credit — balance,
-  APR, repayment schedule, payoff, available credit — and what similar businesses
-  have borrowed (qbo_lending_get_loans, qbo_lending_get_peer_offers). Use
-  proactively when a cash shortfall or funding need surfaces — including from
-  payroll, cash-flow, or invoicing work — to check whether the user has a line of
-  credit to draw from and, with their consent, what similar businesses receive.
-  Read-only: never makes payments, draws, or loan changes, and returns guidance
-  only — never a loan offer, rate, credit limit, or approval decision. Not for
-  loan application status or non-QuickBooks-Capital products (SBA, invoice
-  factoring, merchant cash advances, consumer loans).
+  QuickBooks Capital small-business financing: QuickBooks Term Loan, Line of
+  Credit, Intuit Business Credit Card (issued by WebBank), and the QuickBooks
+  Business Loan Marketplace. Use to explain how these products work
+  (eligibility, rates, fees, terms), compare or choose between them, estimate
+  loan payments (weekly/monthly payment, total interest, total repayment), and
+  answer questions about the signed-in user's own QuickBooks Capital loans and
+  lines of credit (balance, APR, repayment schedule, payoff, available credit),
+  plus what similar businesses have borrowed. Use proactively when a funding
+  need surfaces from payroll, cash-flow, or invoicing work to check for a
+  drawable line of credit and, with consent, peer offers. Read-only guidance
+  only: never makes payments, draws, or loan changes, and never gives a loan
+  offer, rate, credit limit, or approval decision. Not for loan application
+  status or non-QuickBooks-Capital products (SBA, invoice factoring, merchant
+  cash advances, consumer loans).
 ---
 
 # Lending
