@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add `analyze-payroll-cost`, `chase-overdue-invoices`, `email-to-estimate-invoice`, `lending`,
+  `payroll-employee-onboarding`, `payroll-help`, and `set-base-pay` skills, bringing this plugin
+  in line with the full QuickBooks skill set.
+
 ## 0.1.0
 
 Initial release.
