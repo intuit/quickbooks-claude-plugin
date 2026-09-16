@@ -40,12 +40,17 @@ Do not mention omitted optional reports, such as Sales by Product/Service when S
 ## Tool sequence for QuickBooks account data
 Use the tools exposed by the Intuit QuickBooks app connector.
 
-Always use the text-only variants of each Intuit QuickBooks tool listed below. These return plain text/markdown so you can synthesize the briefing yourself without rendering interactive widgets.
+HARD REQUIREMENT — text variants only. Every report call in this skill MUST use a tool name ending in `_text`. A tool name that does NOT end in `_text` (e.g. `profit_loss_quickbooks_account`, `cash_flow_quickbooks_account`, `qbo_accounting_get_balance_sheet`, `qbo_accounting_get_ar_aging_summary`, `qbo_accounting_get_sales_by_customer_summary`, `qbo_accounting_get_sales_by_product_summary`) is a WIDGET tool and is FORBIDDEN anywhere in this skill, even if it is already loaded from earlier in the conversation and even if a `tool_search` call doesn't happen to surface the `_text` sibling. Calling a widget tool renders an interactive card in the chat that duplicates the final `business_health_check_widget` output — this is a defect, not a style choice.
+
+Before calling ANY report tool in this skill:
+
+- Confirm the exact tool name you are about to call ends in `_text`. If it doesn't, stop and run `tool_search` again with a query built from that specific report's name (e.g. "cash flow quickbooks account text") until the `_text` version is loaded — do not fall back to a widget tool that happens to already be available.
+- Never reuse a widget-suffixed tool just because it returned usable text in its response — the text content being similar to the `_text` variant's output does not excuse rendering the widget.
 
 After the user confirms the plan:
 
 1. Call the Intuit QuickBooks `company_info` tool first to establish the QuickBooks connection.
-2. Pull the selected reports using the text-only tool variants:
+2. Pull the selected reports using ONLY these exact tool names — every one ends in `_text`:
    - `profit_loss_quickbooks_account_text` for revenue, COGS, expenses, gross margin, net income, and monthly breakdown.
    - `cash_flow_quickbooks_account_text` for operating/investing/financing cash movement, net cash increase, and ending cash.
    - `qbo_accounting_get_balance_sheet_text` for assets, liabilities, equity, cash, A/R, A/P, current ratio, debt-to-equity, and working capital.
